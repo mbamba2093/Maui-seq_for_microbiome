@@ -24,27 +24,46 @@ The pipeline automates a series of steps including preprocessing, assembly, coun
 This configuration file provides parameters for PEAR and BLAST and the paths to the various data.
 
 [Main_configure]
-data_dir = /path/to/data_directory/
-out_dir = /path/to/output_directory/
-prefix = First_analysis
-need_blast = True ← if False, non Blast search
-taxa_db = /path/to/taxa_db/
-seq_db = /path/to/seq_db/
+
+data_dir = /path/to/data_directory/ # PATH to directory containing .fastq files.
+
+out_dir = /path/to/output_directory/ # PATH to output directory.
+
+prefix = First_analysis # Prefixes for result files.
+
+need_blast = True # if False, BLAST search will not be performed.
+
+taxa_db = /path/to/taxa_db/ # PATH to output taxa database. If not found, it is generated.
+
+seq_db = /path/to/seq_db/ # PATH to output taxa database. If not found, it is generated.
 
 [Maui_configure]
-marker_gene = V5
-UMI_len = 12
-min_ave_reads_number = 0.1
+
+marker_gene = V5 # Please see the MAUI_modules.Config.maui_gene(). This information is used for detect primer length. 
+
+UMI_len = 12 # How many bases are in the UMI sequence upstream of the primer sequence.
+
+min_ave_reads_number = 0.1 # Minimum number of UMI sequences allowed for all sample averages.
+
 
 [Pear_configure]
+
 min_overlap = 10
+
 min_assembly_length = 300
+
 min_trim_length = 200
+
 quality_threashold = 20
+
 number_of_threads = 42
 
 [Blast_configure]
-blast_db = /path/to/blast_db
+
+blast_db = /path/to/blast_db # PATH to BLAST+ database (output makeblastdb).
 blast_threads = 42
+
 max_target_seqs = 5
-taxonomic_database = /path/to/reference_taxa_db
+
+taxonomic_database = /path/to/reference_taxa_db # PATH to taxonomic information of BLAST+ database,
+
