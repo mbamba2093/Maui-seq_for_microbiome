@@ -1,0 +1,15 @@
+# Test data information
+I will upload the files somewhere.
+
+## BLAST Reference database
+xxxxxx.fasta
+This file contains data from the RDP11 bacterial 16S rRNA sequences (Cole et al., 2014) combined with the Lotus japonicus Gifu genome v1.2 (Kamal et al., 2020).
+Please makeblastdb with this file before run our scripts.
+
+## Reference taxa data
+xxxxxx.pkl
+This file describes the taxon information in the above database as a hierarchical structure.
+
+## Tutorial data
+
+
