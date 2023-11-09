@@ -61,6 +61,7 @@ number_of_threads = 42
 [Blast_configure]
 
 blast_db = /path/to/blast_db # PATH to BLAST+ database (output makeblastdb).
+
 blast_threads = 42
 
 max_target_seqs = 5
